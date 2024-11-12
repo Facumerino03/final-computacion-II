@@ -2,19 +2,20 @@ import argparse
 import socket
 import json
 import threading
-import redis
+import redis #type: ignore
 from logger import Logger
 from src.model.ticket import Ticket
 from src.utils import parse_message, make_response
 from src.services.ticket_service import TicketManager
 
-ticket_manager = TicketManager(redis.Redis(host='localhost', port=6379, db=0))
+ticket_manager = TicketManager(redis.Redis(host='localhost', port=6379, db=0, password = 2037))
 
 class ClientHandler:
     
     def __init__(self, socket, address):
         self.socket = socket
         self.address = address
+        self.client_id = f"{address[0]}:{address[1]}"
         self.commands = {
             'create': self.create,
             'find': self.find,
@@ -25,6 +26,12 @@ class ClientHandler:
         
         self.main()
 
+    def has_permission(self, ticket_data):
+        '''
+        Verificar si el cliente tiene permiso para realizar operaciones en el ticket.
+        '''
+        return ticket_data.owner_address == self.client_id
+    
     def create(self, args):
         '''
         Crear un nuevo ticket.
@@ -48,6 +55,7 @@ class ClientHandler:
             title=parsed_args.title,
             author=parsed_args.author,
             description=parsed_args.description,
+            owner_address=self.client_id,
             status='pending'
         )
         
@@ -65,6 +73,10 @@ class ClientHandler:
         '''
         Buscar un ticket por id.
         '''
+        
+        # Debug: Listar todas las keys de tickets
+        all_keys = ticket_manager.redis_client.keys('ticket:*')
+        logger.info(f"Tickets disponibles en Redis: {[k.decode('utf-8') for k in all_keys]}")
 
         # Configurar el parser de argumentos
         parser = argparse.ArgumentParser(description='Listar tickets por id.')
@@ -87,6 +99,12 @@ class ClientHandler:
             logger.error(
                 f'Ticket no encontrado por id {ticket_id} por {self.address[0]}:{self.address[1]}!')
             response = make_response(404, f'Ticket no encontrado!')
+            self.socket.send(response.encode())
+            return
+        
+        if not self.has_permission(ticket_data):
+            logger.error(f'Access denied for ticket {ticket_id}')
+            response = make_response(403, 'No tienes permiso para ver este ticket')
             self.socket.send(response.encode())
             return
 
@@ -119,7 +137,6 @@ class ClientHandler:
             return
 
         ticket_id = parsed_args.id
-
         ticket_data = ticket_manager.get_ticket(int(ticket_id))
 
         # Verificar si el ticket existe
@@ -127,6 +144,12 @@ class ClientHandler:
             logger.error(
                 f'Ticket no encontrado por id {ticket_id} por {self.address[0]}:{self.address[1]}!')
             response = make_response(404, f'Ticket no encontrado!')
+            self.socket.send(response.encode())
+            return
+        
+        if not self.has_permission(ticket_data):
+            logger.error(f'Access denied for ticket {ticket_id}')
+            response = make_response(403, 'No tienes permiso para actualizar este ticket')
             self.socket.send(response.encode())
             return
         
@@ -139,17 +162,9 @@ class ClientHandler:
         if parsed_args.status:
             data['status'] = parsed_args.status
         
-        # Intentar obtener el ticket desde Redis
-        ticket = ticket_manager.update_ticket(int(ticket_id), data)
-        if not ticket:
-            logger.error(f'Ticket con ID {ticket_id} no encontrado.')
-            response = make_response(404, f'Ticket con ID {ticket_id} no encontrado.')
-            self.socket.send(response.encode())
-            return
-    
-            
         # Si hay datos para actualizar, guardarlos en Redis
         if data:
+            ticket_manager.update_ticket(int(ticket_id), data)
             logger.info(f'Ticket con ID {ticket_id} actualizado exitosamente por {self.address[0]}:{self.address[1]}!')
             response = make_response(200, f'Ticket actualizado exitosamente.')
             self.socket.send(response.encode())
@@ -185,6 +200,12 @@ class ClientHandler:
             logger.error(
                 f'Ticket no encontrado por id {ticket_id} por {self.address[0]}:{self.address[1]}!')
             response = make_response(404, f'Ticket no encontrado!')
+            self.socket.send(response.encode())
+            return
+
+        if not self.has_permission(ticket_data):
+            logger.error(f'Access denied for ticket {ticket_id}')
+            response = make_response(403, 'No tienes permiso para eliminar este ticket')
             self.socket.send(response.encode())
             return
         

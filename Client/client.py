@@ -3,7 +3,6 @@ import socket
 import argparse
 from utils import parse_request
 
-
 class Client:
     def __init__(self, host, port):
         self.sock = socket.socket(
@@ -41,5 +40,19 @@ if __name__ == "__main__":
     parser.add_argument('--host', '-a', type=str, default='127.0.0.1', help='Server address')
     parser.add_argument('--port', '-p', type=int, default=8080, help='Server port')
     args = parser.parse_args()
+
+    print("""
+    ¡Bienvenido al Sistema de Tickets!
+
+    Este sistema le permite gestionar tickets fácilmente con los siguientes comandos:
+          
+    - create -t "Título" -a "Autor" -d "Descripción"                           -> Crea un ticket.
+    - update -i ID [-t "Título"] [-a "Autor"] [-d "Descripción"] [-s "Estado"] -> Actualiza un ticket.
+    - delete -i ID                                                             -> Elimina un ticket por su ID.
+    - find -i ID                                                               -> Lista todos los tickets o busca por ID.
+    - exit                                                                     -> Cierra el sistema.
+
+    Ingrese un comando para empezar.
+    """)
 
     Client(args.host, args.port)

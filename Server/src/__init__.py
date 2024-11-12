@@ -1,1 +1,1 @@
-from .utils import Singleton, parse_message, make_response, parse_request
+from .utils import parse_message, make_response
