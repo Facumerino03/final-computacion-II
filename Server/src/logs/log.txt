@@ -1,0 +1,134 @@
+2024-11-13 01:32:35,787- [INFO] - (MainThread): Socket creado correctamente en localhost:8080
+2024-11-13 01:32:35,788- [INFO] - (MainThread): Aceptando conexiones entrantes...
+2024-11-13 01:32:50,630- [INFO] - (MainThread): Conexión establecida con 127.0.0.1:39470
+2024-11-13 01:33:33,764- [INFO] - (Thread-1 (ClientHandler)): Executing command: find
+2024-11-13 01:33:33,773- [INFO] - (Thread-1 (ClientHandler)): Ticket con ID 2 enviado al cliente exitosamente.
+2024-11-13 01:34:00,286- [INFO] - (Thread-1 (ClientHandler)): Executing command: update
+2024-11-13 01:34:00,289- [INFO] - (Thread-1 (ClientHandler)): Ticket con ID 2 actualizado exitosamente por 127.0.0.1:39470!
+2024-11-13 01:34:10,849- [INFO] - (Thread-1 (ClientHandler)): Executing command: create
+2024-11-13 01:34:10,850- [ERROR] - (Thread-1 (ClientHandler)): Error inesperado: 'ClientHandler' object has no attribute 'status'
+2024-11-13 01:34:16,292- [INFO] - (MainThread): Conexión establecida con 127.0.0.1:48336
+2024-11-13 01:34:56,875- [INFO] - (Thread-2 (ClientHandler)): Executing command: create
+2024-11-13 01:34:56,876- [ERROR] - (Thread-2 (ClientHandler)): Error inesperado: 'ClientHandler' object has no attribute 'status'
+2024-11-13 01:35:33,911- [INFO] - (MainThread): KeyboardInterrupt: el servidor se cerrará...
+2024-11-13 01:35:41,893- [INFO] - (MainThread): Socket creado correctamente en localhost:8080
+2024-11-13 01:35:41,893- [INFO] - (MainThread): Aceptando conexiones entrantes...
+2024-11-13 01:35:43,905- [INFO] - (MainThread): Conexión establecida con 127.0.0.1:53426
+2024-11-13 01:35:45,387- [INFO] - (MainThread): Conexión establecida con 127.0.0.1:53434
+2024-11-13 01:36:23,575- [INFO] - (MainThread): Conexión establecida con 127.0.0.1:42890
+2024-11-13 01:36:31,812- [INFO] - (Thread-3 (ClientHandler)): Executing command: find
+2024-11-13 01:36:31,813- [ERROR] - (Thread-3 (ClientHandler)): Has ingresado el comando find de forma incorrecta. Uso: find -i <id>
+2024-11-13 01:36:37,660- [INFO] - (Thread-3 (ClientHandler)): Executing command: delete
+2024-11-13 01:36:37,661- [ERROR] - (Thread-3 (ClientHandler)): Has ingresado el comando delete de forma incorrecta. Uso: delete -i <id>
+2024-11-13 01:36:40,198- [ERROR] - (Thread-3 (ClientHandler)): Comando no encontrado: delele. Inténtalo de nuevo!
+2024-11-13 01:36:47,579- [ERROR] - (Thread-3 (ClientHandler)): Comando no encontrado: get. Inténtalo de nuevo!
+2024-11-13 01:37:13,746- [INFO] - (Thread-3 (ClientHandler)): Executing command: create
+2024-11-13 01:37:13,751- [INFO] - (Thread-3 (ClientHandler)): Ticket creado exitosamente con ID: 4 por 127.0.0.1:42890!
+2024-11-13 01:55:03,492- [INFO] - (Thread-3 (ClientHandler)): Executing command: update
+2024-11-13 01:55:03,497- [INFO] - (Thread-3 (ClientHandler)): Ticket con ID 2 actualizado exitosamente por 127.0.0.1:42890!
+2024-11-13 01:55:15,888- [INFO] - (Thread-2 (ClientHandler)): Executing command: update
+2024-11-13 01:55:15,890- [ERROR] - (Thread-2 (ClientHandler)): Acceso denegado para el ticket 2 por 127.0.0.1:53434!
+2024-11-13 01:55:25,945- [INFO] - (Thread-2 (ClientHandler)): Executing command: update
+2024-11-13 01:55:25,946- [ERROR] - (Thread-2 (ClientHandler)): Has ingresado el comando update de forma incorrecta. Uso: update -i <id> [-t <título>] [-d <descripción>] [-s <estado>]
+2024-11-13 01:55:36,679- [INFO] - (Thread-3 (ClientHandler)): Executing command: update
+2024-11-13 01:55:36,683- [INFO] - (Thread-3 (ClientHandler)): Ticket con ID 2 actualizado exitosamente por 127.0.0.1:42890!
+2024-11-13 01:55:52,143- [INFO] - (Thread-2 (ClientHandler)): Executing command: delete
+2024-11-13 01:55:52,144- [ERROR] - (Thread-2 (ClientHandler)): Acceso denegado para el ticket 2 por 127.0.0.1:53434!
+2024-11-13 01:55:56,507- [INFO] - (Thread-3 (ClientHandler)): Executing command: delete
+2024-11-13 01:55:56,509- [INFO] - (Thread-3 (ClientHandler)): Ticket con ID 2 eliminado exitosamente por 127.0.0.1:42890!
+2024-11-13 01:56:06,362- [INFO] - (Thread-2 (ClientHandler)): Executing command: delete
+2024-11-13 01:56:06,363- [ERROR] - (Thread-2 (ClientHandler)): Acceso denegado para el ticket 3 por 127.0.0.1:53434!
+2024-11-13 01:56:15,184- [INFO] - (Thread-2 (ClientHandler)): Executing command: delete
+2024-11-13 01:56:15,186- [ERROR] - (Thread-2 (ClientHandler)): Acceso denegado para el ticket 4 por 127.0.0.1:53434!
+2024-11-13 01:59:21,838- [INFO] - (MainThread): KeyboardInterrupt: el servidor se cerrará...
+2024-11-13 01:59:28,117- [INFO] - (MainThread): Socket creado correctamente en localhost:8080
+2024-11-13 01:59:28,118- [INFO] - (MainThread): Aceptando conexiones entrantes...
+2024-11-13 01:59:30,125- [INFO] - (MainThread): Conexión establecida con 127.0.0.1:54332
+2024-11-13 01:59:32,976- [ERROR] - (Thread-1 (ClientHandler)): Comando no encontrado: loggi. Inténtalo de nuevo!
+2024-11-13 01:59:38,428- [ERROR] - (Thread-1 (ClientHandler)): Has ingresado el comando login de forma incorrecta. Uso: login [-i <ID>]
+2024-11-13 02:01:45,917- [INFO] - (MainThread): KeyboardInterrupt: el servidor se cerrará...
+2024-11-13 02:01:51,000- [INFO] - (MainThread): Socket creado correctamente en localhost:8080
+2024-11-13 02:01:51,000- [INFO] - (MainThread): Aceptando conexiones entrantes...
+2024-11-13 02:01:52,850- [INFO] - (MainThread): Conexión establecida con 127.0.0.1:56882
+2024-11-13 02:01:56,033- [ERROR] - (Thread-1 (ClientHandler)): Comando no encontrado: loggi. Inténtalo de nuevo!
+2024-11-13 02:02:01,138- [ERROR] - (Thread-1 (ClientHandler)): Has ingresado el comando login de forma incorrecta. Uso: login [-i <ID>] para iniciar sesión o login sin argumentos para registrarte
+2024-11-13 02:02:06,858- [ERROR] - (Thread-1 (ClientHandler)): Has ingresado el comando login de forma incorrecta. Uso: login [-i <ID>] para iniciar sesión o login sin argumentos para registrarte
+2024-11-13 02:02:24,406- [ERROR] - (Thread-1 (ClientHandler)): Has ingresado el comando login de forma incorrecta. Uso: login [-i <ID>] para iniciar sesión o login sin argumentos para registrarte
+2024-11-13 02:04:05,001- [INFO] - (MainThread): KeyboardInterrupt: el servidor se cerrará...
+2024-11-13 02:04:09,040- [INFO] - (MainThread): Socket creado correctamente en localhost:8080
+2024-11-13 02:04:09,040- [INFO] - (MainThread): Aceptando conexiones entrantes...
+2024-11-13 02:04:10,970- [INFO] - (MainThread): Conexión establecida con 127.0.0.1:43452
+2024-11-13 02:04:18,464- [INFO] - (MainThread): Conexión establecida con 127.0.0.1:43462
+2024-11-13 02:04:20,083- [ERROR] - (Thread-2 (ClientHandler)): Comando no encontrado: ;pgg. Inténtalo de nuevo!
+2024-11-13 02:04:23,693- [ERROR] - (Thread-2 (ClientHandler)): Has ingresado el comando login de forma incorrecta. Uso: login [-i <ID>] para iniciar sesión o login sin argumentos para registrarte
+2024-11-13 02:04:33,853- [ERROR] - (Thread-2 (ClientHandler)): Has ingresado el comando login de forma incorrecta. Uso: login [-i <ID>] para iniciar sesión o login sin argumentos para registrarte
+2024-11-13 02:04:49,940- [ERROR] - (Thread-2 (ClientHandler)): Has ingresado el comando login de forma incorrecta. Uso: login [-i <ID>] para iniciar sesión o login sin argumentos para registrarte
+2024-11-13 02:09:10,289- [INFO] - (MainThread): KeyboardInterrupt: el servidor se cerrará...
+2024-11-13 02:09:11,055- [INFO] - (Thread-1 (ClientHandler)): Cliente desconectado!
+2024-11-13 02:09:15,362- [INFO] - (MainThread): Socket creado correctamente en localhost:8080
+2024-11-13 02:09:15,362- [INFO] - (MainThread): Aceptando conexiones entrantes...
+2024-11-13 02:09:17,045- [INFO] - (MainThread): Conexión establecida con 127.0.0.1:45914
+2024-11-13 02:09:20,192- [ERROR] - (Thread-1 (ClientHandler)): Comando no encontrado: logg. Inténtalo de nuevo!
+2024-11-13 02:09:22,353- [ERROR] - (Thread-1 (ClientHandler)): Has ingresado el comando login de forma incorrecta. Uso: login [-i <ID>] para iniciar sesión o login sin argumentos para registrarte
+2024-11-13 02:09:35,142- [INFO] - (MainThread): Conexión establecida con 127.0.0.1:34376
+2024-11-13 02:09:44,085- [ERROR] - (Thread-2 (ClientHandler)): Comando no encontrado: lofgin. Inténtalo de nuevo!
+2024-11-13 02:09:57,076- [INFO] - (Thread-2 (ClientHandler)): Executing command: find
+2024-11-13 02:09:57,082- [INFO] - (Thread-2 (ClientHandler)): Ticket con ID 4 enviado al cliente exitosamente.
+2024-11-13 02:12:35,471- [INFO] - (MainThread): KeyboardInterrupt: el servidor se cerrará...
+2024-11-13 02:12:39,202- [INFO] - (MainThread): Socket creado correctamente en localhost:8080
+2024-11-13 02:12:39,203- [INFO] - (MainThread): Aceptando conexiones entrantes...
+2024-11-13 02:12:40,942- [INFO] - (MainThread): Conexión establecida con 127.0.0.1:46346
+2024-11-13 02:12:44,071- [ERROR] - (Thread-1 (ClientHandler)): Comando no encontrado: loggg. Inténtalo de nuevo!
+2024-11-13 02:12:51,268- [INFO] - (MainThread): Conexión establecida con 127.0.0.1:48522
+2024-11-13 02:13:00,400- [ERROR] - (Thread-2 (ClientHandler)): Has ingresado el comando login de forma incorrecta. Uso: login [-i <ID>] para iniciar sesión o login sin argumentos para registrarte
+2024-11-13 02:13:14,385- [INFO] - (Thread-1 (ClientHandler)): Executing command: find
+2024-11-13 02:13:14,390- [ERROR] - (Thread-1 (ClientHandler)): Ticket no encontrado por id 1 por 127.0.0.1:46346!
+2024-11-13 02:13:19,690- [INFO] - (Thread-2 (ClientHandler)): Executing command: find
+2024-11-13 02:13:19,691- [INFO] - (Thread-2 (ClientHandler)): Ticket con ID 4 enviado al cliente exitosamente.
+2024-11-13 02:14:00,144- [INFO] - (Thread-1 (ClientHandler)): Executing command: find
+2024-11-13 02:14:00,146- [ERROR] - (Thread-1 (ClientHandler)): Acceso denegado para el ticket 4 por 127.0.0.1:46346!
+2024-11-13 02:14:10,792- [INFO] - (Thread-2 (ClientHandler)): Executing command: delete
+2024-11-13 02:14:10,793- [ERROR] - (Thread-2 (ClientHandler)): Has ingresado el comando delete de forma incorrecta. Uso: delete -i <id>
+2024-11-13 02:14:23,075- [INFO] - (Thread-2 (ClientHandler)): Executing command: delete
+2024-11-13 02:14:23,077- [ERROR] - (Thread-2 (ClientHandler)): Acceso denegado para el ticket 4 por 127.0.0.1:48522!
+2024-11-13 02:16:31,657- [INFO] - (MainThread): KeyboardInterrupt: el servidor se cerrará...
+2024-11-13 02:16:39,505- [INFO] - (MainThread): Socket creado correctamente en localhost:8080
+2024-11-13 02:16:39,505- [INFO] - (MainThread): Aceptando conexiones entrantes...
+2024-11-13 02:16:41,062- [INFO] - (MainThread): Conexión establecida con 127.0.0.1:40188
+2024-11-13 02:16:42,893- [INFO] - (MainThread): Conexión establecida con 127.0.0.1:40204
+2024-11-13 02:16:47,226- [ERROR] - (Thread-1 (ClientHandler)): Comando no encontrado: loggin. Inténtalo de nuevo!
+2024-11-13 02:17:01,041- [ERROR] - (Thread-2 (ClientHandler)): Has ingresado el comando login de forma incorrecta. Uso: login [-i <ID>] para iniciar sesión o login sin argumentos para registrarte
+2024-11-13 02:17:21,748- [INFO] - (Thread-2 (ClientHandler)): Executing command: find
+2024-11-13 02:17:21,754- [INFO] - (Thread-2 (ClientHandler)): Ticket con ID 4 enviado al cliente exitosamente.
+2024-11-13 02:17:27,298- [INFO] - (Thread-2 (ClientHandler)): Executing command: find
+2024-11-13 02:17:27,300- [INFO] - (Thread-2 (ClientHandler)): Ticket con ID 4 enviado al cliente exitosamente.
+2024-11-13 02:18:25,077- [INFO] - (Thread-2 (ClientHandler)): Cliente desconectado!
+2024-11-13 02:18:26,247- [INFO] - (Thread-1 (ClientHandler)): Cliente desconectado!
+2024-11-13 02:18:26,945- [INFO] - (MainThread): KeyboardInterrupt: el servidor se cerrará...
+2024-11-13 03:28:10,421- [INFO] - (MainThread): Socket creado correctamente en localhost:8080
+2024-11-13 03:28:10,422- [INFO] - (MainThread): Aceptando conexiones entrantes...
+2024-11-13 03:28:14,580- [INFO] - (MainThread): Conexión establecida con 127.0.0.1:38010
+2024-11-13 03:28:22,025- [INFO] - (Thread-1 (ClientHandler)): Executing command: create
+2024-11-13 03:28:22,084- [ERROR] - (Thread-1 (ClientHandler)): Error inesperado: Error -2 connecting to host.docker.internal:6379. Name or service not known.
+2024-11-13 03:28:30,873- [INFO] - (MainThread): KeyboardInterrupt: el servidor se cerrará...
+2024-11-13 03:28:31,878- [INFO] - (MainThread): Socket creado correctamente en localhost:8080
+2024-11-13 03:28:31,878- [INFO] - (MainThread): Aceptando conexiones entrantes...
+2024-11-13 03:28:35,329- [INFO] - (MainThread): Conexión establecida con 127.0.0.1:34536
+2024-11-13 03:28:37,812- [INFO] - (Thread-1 (ClientHandler)): Executing command: create
+2024-11-13 03:28:37,869- [ERROR] - (Thread-1 (ClientHandler)): Error inesperado: Error -2 connecting to host.docker.internal:6379. Name or service not known.
+2024-11-13 03:28:59,883- [INFO] - (MainThread): KeyboardInterrupt: el servidor se cerrará...
+2024-11-13 03:29:02,652- [INFO] - (MainThread): Socket creado correctamente en localhost:8080
+2024-11-13 03:29:02,652- [INFO] - (MainThread): Aceptando conexiones entrantes...
+2024-11-13 03:29:07,000- [INFO] - (MainThread): Conexión establecida con 127.0.0.1:40754
+2024-11-13 03:29:11,585- [INFO] - (Thread-1 (ClientHandler)): Executing command: create
+2024-11-13 03:29:11,644- [ERROR] - (Thread-1 (ClientHandler)): Error inesperado: Error -2 connecting to host.docker.internal:6379. Name or service not known.
+2024-11-13 03:29:32,131- [INFO] - (MainThread): KeyboardInterrupt: el servidor se cerrará...
+2024-11-13 03:29:44,255- [INFO] - (MainThread): Socket creado correctamente en localhost:8080
+2024-11-13 03:29:44,255- [INFO] - (MainThread): Aceptando conexiones entrantes...
+2024-11-13 03:29:48,355- [INFO] - (MainThread): Conexión establecida con 127.0.0.1:49572
+2024-11-13 03:29:50,421- [INFO] - (Thread-1 (ClientHandler)): Executing command: create
+2024-11-13 03:29:50,437- [INFO] - (Thread-1 (ClientHandler)): Ticket creado exitosamente con ID: 5 por 127.0.0.1:49572!
+2024-11-13 03:30:13,018- [INFO] - (Thread-1 (ClientHandler)): Executing command: delete
+2024-11-13 03:30:13,022- [INFO] - (Thread-1 (ClientHandler)): Ticket con ID 5 eliminado exitosamente por 127.0.0.1:49572!
+2024-11-13 03:30:16,544- [INFO] - (Thread-1 (ClientHandler)): Cliente desconectado!
+2024-11-13 03:30:18,479- [INFO] - (MainThread): KeyboardInterrupt: el servidor se cerrará...

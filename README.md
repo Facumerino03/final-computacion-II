@@ -1,4 +1,15 @@
 # 🧐 Overview
+    command:
+      ["python", "client.py", "--host", "ticket-server", "--port", "8080"]
+
+docker build -t ticket-client:1.0.0 .  
+docker-compose up -d client  
+docker exec -it ticket-client /bin/bash
+python client.py -a localhost -p 8080
+
+docker build -t ticket-server:1.0.0 .
+docker run -d --name ticket-server --network ticket-network -p 8080:8080 ticket-server:1.0.0 python server.py -h 0.0.0.0 -p 8080 -d True
+
 The purpose of this project is to load tickets onto a server, making use of client-server communication, and then save them in a database.
 
 **Table of Contents**
@@ -108,7 +119,7 @@ Arguments:
 - -s: This argument is used to indicate the status to be assigned to the ticket.
 
 ```bash
-update -i 3 -t "titlee" -d "description" -s "status"
+update -i 2 -t "titulo" -d "description" -s "status"
 ```
 
 ### Delete

@@ -4,6 +4,7 @@ import shlex
 def parse_message(message):
     '''
     Función para parsear el mensaje recibido desde el cliente
+    
     '''
     args = shlex.split(message)
     command = args.pop(0)
@@ -11,7 +12,8 @@ def parse_message(message):
 
 def make_response(status_code, response):
     '''
-    Función para crear una respuesta en formato JSON
+    Función para crear una respuesta en formato JSON y enviarla al cliente
+    
     '''
     return json.dumps({
         'status_code': status_code,

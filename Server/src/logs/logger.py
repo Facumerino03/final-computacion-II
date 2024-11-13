@@ -27,7 +27,15 @@ class Logger:
             self.logger.addHandler(console_handler)
 
     def info(self, message):
+        '''
+        Imprime un mensaje de información en el log
+        
+        '''
         self.logger.info(message)
 
     def error(self, message):
+        '''
+        Imprime un mensaje de error en el log
+        
+        '''
         self.logger.error(message)
