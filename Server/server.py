@@ -10,8 +10,6 @@ from src.utils import parse_message, make_response
 from src.services import TicketManager
 import os
 
-load_dotenv()
-
 redis_host = os.getenv('REDIS_HOST')
 redis_port = os.getenv('REDIS_PORT')
 redis_db = os.getenv('REDIS_DB')

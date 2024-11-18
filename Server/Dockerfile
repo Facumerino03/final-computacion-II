@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . .
 
 # Copiar el archivo .env al directorio de trabajo
-COPY .env ./
+#COPY .env ./
 
 # Instalar las dependencias necesarias
 RUN pip install --no-cache-dir -r requirements.txt
